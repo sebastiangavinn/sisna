@@ -95,5 +95,36 @@ export const MAPEL = [
   { kodeMataPelajaran: "TLW03", namaMataPelajaran: "Tilawati Jilid 5" },
   { kodeMataPelajaran: "MB001", namaMataPelajaran: "Tilawati Jilid 6" },
   { kodeMataPelajaran: "MA001", namaMataPelajaran: "Al-Quran" },
-  { kodeMataPelajaran: "FQ001", namaMataPelajaran: "Fiqih" }
+  { kodeMataPelajaran: "FQ001", namaMataPelajaran: "Fiqih" },
+];
+
+export const PROFILE = {
+  name: "Zahrotun Nisa'",
+  ttl: "Jember, 19 Juli 2002",
+  alamat: "Jln. Kalimantan x no. 173, Sumbersari, Jember",
+  jurusan: "Ilmu Tanah/FAPERTA",
+  nomerWA: "083147695742",
+  namaWali: "Supriyadi",
+  nomerWali: "0838753965486",
+};
+
+export const TAHUN_AJARAN = [
+  {
+    idTahunAjaran: 20211,
+    tahunAjaran: 2021,
+    jenisSemester: "Ganjil",
+    periodeSemester: "08/08/2020 - 22/12/2020",
+  },
+  {
+    idTahunAjaran: 20212,
+    tahunAjaran: 2021,
+    jenisSemester: "Genap",
+    periodeSemester: "01/02/2021 - 26/06/2021",
+  },
+  {
+    idTahunAjaran: 21221,
+    tahunAjaran: 2122,
+    jenisSemester: "Ganjil",
+    periodeSemester: "07/08/2021 - 22/12/2021",
+  },
 ];

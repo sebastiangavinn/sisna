@@ -6,11 +6,7 @@ const CardInfo = () => {
   return (
     <Link to="/informasi-akademik/detail">
       <div className="border-2 border-[#5D9453] rounded-3xl px-6 pt-2 pb-8">
-        <img
-          src="src/assets/image 2.png"
-          alt="info"
-          className="mx-auto mb-4 w-full"
-        />
+        <img src="/image 2.png" alt="info" className="mx-auto mb-4 w-full" />
         <div className="space-y-1">
           <h3 className="text-sm font-bold">
             Informasi dimulainya kegiatan diniyah

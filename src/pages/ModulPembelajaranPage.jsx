@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router";
 import { FiTrash2, FiEdit } from "react-icons/fi";
 import LabelDropdown from "../components/LabelDropdown";
+import Modal from "../components/Modal";
+import FormField from "../components/FormField";
+import LabelDescription from "../components/LabelDescription";
+import PrimaryButton from "../components/PrimaryButton";
 
 const ModulPembelajaranPage = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [form, setForm] = useState({
+    tahun: "",
+    mataPelajaran: "",
+    judul: "",
+    uploadVideo: "",
+    uploadMateri: "",
+    catatan: "",
+    pertanyaan: "",
+    soalGambar: "",
+    pilihanA: "",
+    pilihanB: "",
+    pilihanC: "",
+    pilihanD: "",
+    kunciJawaban: "",
+  });
   const options = [
     { value: "option1", label: "Option 1" },
     { value: "option2", label: "Option 2" },
@@ -37,6 +57,13 @@ const ModulPembelajaranPage = () => {
     },
   ];
 
+  const handleInputChange = (field) => (e) => {
+    setForm((prev) => ({ ...prev, [field]: e.target.value }));
+  };
+
+  const handleModalOpen = () => setIsModalOpen(true);
+  const handleModalClose = () => setIsModalOpen(false);
+
   const handleDropdownChange = (value) => {
     console.log("Selected:", value);
   };
@@ -53,26 +80,29 @@ const ModulPembelajaranPage = () => {
             name="tahunAjaran"
           />{" "}
           <LabelDropdown
-            label="Tahun Ajaran :"
+            label="Kelas :"
             options={options}
             onChange={handleDropdownChange}
-            id="tahunAjaran"
-            name="tahunAjaran"
+            id="kelas"
+            name="kelas"
           />{" "}
           <LabelDropdown
-            label="Tahun Ajaran :"
+            label="Mata Pelajaran :"
             options={options}
             onChange={handleDropdownChange}
-            id="tahunAjaran"
-            name="tahunAjaran"
+            id="mataPelajaran"
+            name="mataPelajaran"
           />
         </div>
-        <Link className="bg-[#347928] text-white py-2 px-4 rounded-lg text-sm font-bold">
+        <button
+          onClick={handleModalOpen}
+          className="bg-[#347928] text-white py-2 px-4 rounded-lg text-sm font-bold"
+        >
           <span className="bg-white py-[0.5] px-2 font-extrabold rounded-md text-[#347928] text-lg">
             +
           </span>{" "}
           Tambah Materi
-        </Link>
+        </button>
       </div>
 
       {/* Title Section */}
@@ -115,6 +145,112 @@ const ModulPembelajaranPage = () => {
           </Link>
         ))}
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={handleModalClose}
+        title="Tambah Materi"
+      >
+        <form className="space-y-4">
+          <FormField
+            label="Tahun Ajaran"
+            required
+            value={form.tahun}
+            onChange={handleInputChange("tahun")}
+          />
+          <FormField
+            label="Mata Pelajaran"
+            required
+            value={form.mataPelajaran}
+            onChange={handleInputChange("mataPelajaran")}
+          />
+          <LabelDescription
+            label="Judul Materi"
+            rows={2}
+            required
+            value={form.tahun}
+            onChange={handleInputChange("tahun")}
+          />
+          <FormField
+            label="Upload Video Pembelajaran"
+            type="file"
+            accept="image/*"
+            endAdorment={
+              <div className="w-1/4">
+                <PrimaryButton text="Unggah" />
+              </div>
+            }
+          />
+          <FormField
+            label="Upload Materi Pembelajaran"
+            type="file"
+            accept="image/*"
+            endAdorment={
+              <div className="w-1/4">
+                <PrimaryButton text="Unggah" />
+              </div>
+            }
+          />
+          <LabelDescription
+            label="Catatan Materi"
+            rows={5}
+            value={form.catatan}
+            onChange={handleInputChange("catatan")}
+          />
+          <p className="font-bold text-[#6D6D6D]">Latihan Soal</p>
+          <LabelDescription
+            label="Pertanyaan"
+            rows={2}
+            value={form.pertanyaan}
+            onChange={handleInputChange("pertanyaan")}
+          />
+          <FormField
+            label="Soal Gambar"
+            type="file"
+            accept="image/*"
+            endAdorment={
+              <div className="w-1/4">
+                <PrimaryButton text="Unggah" />
+              </div>
+            }
+          />
+          <FormField
+            label="Pilihan A"
+            value={form.pilihanA}
+            onChange={handleInputChange("pilihanA")}
+          />{" "}
+          <FormField
+            label="Pilihan B"
+            value={form.pilihanB}
+            onChange={handleInputChange("pilihanB")}
+          />{" "}
+          <FormField
+            label="Pilihan C"
+            value={form.pilihanC}
+            onChange={handleInputChange("pilihanC")}
+          />{" "}
+          <FormField
+            label="Pilihan D"
+            value={form.pilihanD}
+            onChange={handleInputChange("pilihanD")}
+          />{" "}
+          <FormField
+            label="Kunci Jawaban"
+            value={form.kunciJawaban}
+            onChange={handleInputChange("kunciJawaban")}
+          />
+          <div className="flex items-center justify-end">
+            <div className="flex items-center gap-4 w-1/2">
+              <PrimaryButton
+                variant="outline"
+                text="Batal"
+                onClick={handleModalClose}
+              />
+              <PrimaryButton text="Simpan" />
+            </div>
+          </div>
+        </form>
+      </Modal>
     </div>
   );
 };

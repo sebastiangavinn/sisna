@@ -1,7 +1,13 @@
 import React from "react";
 import { Link } from "react-router";
 
-const Table = ({ columns, data, showDetailColumn = false }) => {
+const Table = ({
+  columns,
+  data,
+  showDetailColumn = false,
+  showActionColumn = false,
+  onEditClick,
+}) => {
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full border-separate table-auto border-gray-200">
@@ -18,6 +24,11 @@ const Table = ({ columns, data, showDetailColumn = false }) => {
             {showDetailColumn && (
               <th className="px-2 py-2 text-center text-xs font-semibold text-white rounded-md">
                 Hasil Studi Santri
+              </th>
+            )}
+            {showActionColumn && (
+              <th className="px-2 py-2 text-center text-xs font-semibold text-white rounded-md">
+                Aksi
               </th>
             )}
           </tr>
@@ -38,11 +49,29 @@ const Table = ({ columns, data, showDetailColumn = false }) => {
               {showDetailColumn && (
                 <td className="border border-gray-200 px-2 py-2 text-xs font-semibold rounded-md text-center">
                   <Link
-                    to={`/hasil-studi/detail/${rowIndex}`}
+                    to={`detail/${rowIndex}`}
                     className="border border-[#388E3C] text-center px-2 py-1 bg-white font-medium text-xs border-lg"
                   >
                     Lihat Detail
                   </Link>
+                </td>
+              )}
+              {showActionColumn && (
+                <td className="border border-gray-200 px-2 py-2 text-xs font-semibold rounded-md text-center">
+                  <div className="flex justify-center gap-2">
+                    <button
+                      onClick={() => onEditClick(row)}
+                      className="text-blue-500 text-xs"
+                    >
+                      Edit
+                    </button>
+                    <button
+                      onClick={() => alert("Hapus item")}
+                      className="text-red-500 text-xs"
+                    >
+                      Hapus
+                    </button>
+                  </div>
                 </td>
               )}
             </tr>
