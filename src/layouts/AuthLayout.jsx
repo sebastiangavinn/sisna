@@ -16,12 +16,12 @@ const AuthLayout = () => {
         </div>
         <div className="relative z-0 flex flex-col h-full">
           <img
-            src="src/assets/IMG_9898.png"
+            src="/IMG_9898.png"
             alt="Gambar 1"
             className="w-full h-1/2 object-cover"
           />
           <img
-            src="src/assets/IMG_9903.png"
+            src="/IMG_9903.png"
             alt="Gambar 2"
             className="w-full h-1/2 object-cover"
           />

@@ -33,11 +33,7 @@ const ProfilePage = () => {
         </h1>
         <div className="grid md:grid-cols-[250px_1fr] gap-12 w-3/4 mx-auto">
           <div className="border-2 border-[#5D9453] rounded-xl p-5">
-            <img
-              src="src/assets/download (2) 3.png"
-              alt="foto cewe"
-              className="mb-4"
-            />
+            <img src="/download (2) 3.png" alt="foto cewe" className="mb-4" />
             <PrimaryButton text="Unggah Foto" className="text-xs" />
           </div>
           <div className="space-y-1">

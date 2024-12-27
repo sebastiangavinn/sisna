@@ -14,7 +14,7 @@ const BerandaPage = () => {
     <>
       <div className="px-6">
         <img
-          src="src/assets/Black Yellow Modern Digital Marketing Agency Facebook Cover (1286 x 394 piksel) (1) 1.png"
+          src="/Black Yellow Modern Digital Marketing Agency Facebook Cover (1286 x 394 piksel) (1) 1.png"
           alt="banner"
           className="mx-auto mt-16 mb-3 hidden lg:block"
         />
