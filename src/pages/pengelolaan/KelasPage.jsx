@@ -12,11 +12,11 @@ const KelasPage = () => {
     { header: "No", accessor: "no" },
     { header: "Kode Ruang", accessor: "kodeRuang" },
     { header: "Nama Kelas", accessor: "namaKelas" },
-    { header: "Kapasitas Kelas", accessor: "kapasitasKelas" }
+    { header: "Kapasitas Kelas", accessor: "kapasitasKelas" },
   ];
 
   return (
-    <div className="px-20 py-5">
+    <div className="lg:px-20 px-3 py-5">
       <h3
         onClick={() => navigate(-1)}
         className="text-[#347928] flex items-center gap-1 font-extrabold text-base mb-3 cursor-pointer"

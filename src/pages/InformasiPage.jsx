@@ -10,7 +10,7 @@ const InformasiPage = () => {
         </h1>
       </div>
       <div className="rounded-xl bg-white w-full my-8 min-h-screen">
-        <div className="p-12 flex flex-row items-center gap-8">
+        <div className="p-12 flex flex-row flex-wrap items-center gap-8">
           <CardInfo />
           <CardInfo />
         </div>

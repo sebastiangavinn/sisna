@@ -70,8 +70,8 @@ const ModulPembelajaranPage = () => {
 
   return (
     <div className="mt-12 px-12">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
+      <div className="flex xl:items-center xl:flex-row flex-col justify-between">
+        <div className="flex lg:items-center lg:flex-row flex-col gap-3">
           <LabelDropdown
             label="Tahun Ajaran :"
             options={options}
@@ -96,7 +96,7 @@ const ModulPembelajaranPage = () => {
         </div>
         <button
           onClick={handleModalOpen}
-          className="bg-[#347928] text-white py-2 px-4 rounded-lg text-sm font-bold"
+          className="bg-[#347928] text-white py-2 px-4 rounded-lg text-sm font-bold xl:mt-0 mt-9"
         >
           <span className="bg-white py-[0.5] px-2 font-extrabold rounded-md text-[#347928] text-lg">
             +

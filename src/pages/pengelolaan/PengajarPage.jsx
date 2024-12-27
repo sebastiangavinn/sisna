@@ -18,11 +18,11 @@ const PengajarPage = () => {
     { header: "Alamat Rumah (Sesuai dengan KTP)", accessor: "alamat" },
     { header: "Prodi/Fakultas", accessor: "prodi" },
     { header: "No. WA", accessor: "noWa" },
-    { header: "Matapelajaran yang diajarkan", accessor: "mapel" }
+    { header: "Matapelajaran yang diajarkan", accessor: "mapel" },
   ];
 
   return (
-    <div className="px-20 py-5">
+    <div className="lg:px-20 px-3 py-5">
       <h3
         onClick={() => navigate(-1)}
         className="text-[#347928] flex items-center gap-1 font-extrabold text-base mb-3 cursor-pointer"

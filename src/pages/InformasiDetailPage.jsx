@@ -12,7 +12,7 @@ const InformasiDetailPage = () => {
         </h1>
       </div>
       <div className="rounded-xl bg-white w-full my-8 min-h-screen">
-        <div className="px-12 py-8">
+        <div className="lg:px-12 px-6 py-8">
           <h3
             onClick={() => navigate(-1)}
             className="text-[#347928] flex items-center gap-1 font-extrabold text-base mb-3 cursor-pointer"

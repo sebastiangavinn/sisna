@@ -55,7 +55,7 @@ export default function DetailModul() {
   const [selectedAnswers, setSelectedAnswers] = useState({});
 
   return (
-    <div className="px-12 my-8">
+    <div className="lg:px-12 px-6 my-8">
       <div className="border border-[#C3C3C3] rounded-3xl bg-white">
         <header className="flex items-center justify-between p-4 border-b">
           <h3
@@ -86,7 +86,7 @@ export default function DetailModul() {
           </button>
         </header>
 
-        <main className="py-4 px-12">
+        <main className="py-4 lg:px-12 px-4">
           <h1 className="text-xl text-center font-medium mb-4">
             Memahami Kalimah Fi'il, Isim dan Huruf
           </h1>

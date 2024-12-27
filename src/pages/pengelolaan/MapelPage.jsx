@@ -11,11 +11,11 @@ const MapelPage = () => {
   const columns = [
     { header: "No", accessor: "no" },
     { header: "Kode Mata Pelajaran", accessor: "kodeMataPelajaran" },
-    { header: "Nama Mata Pelajaran", accessor: "namaMataPelajaran" }
+    { header: "Nama Mata Pelajaran", accessor: "namaMataPelajaran" },
   ];
 
   return (
-    <div className="px-20 py-5">
+    <div className="lg:px-20 px-3 py-5">
       <h3
         onClick={() => navigate(-1)}
         className="text-[#347928] flex items-center gap-1 font-extrabold text-base mb-3 cursor-pointer"

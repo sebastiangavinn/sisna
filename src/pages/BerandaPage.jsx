@@ -16,10 +16,10 @@ const BerandaPage = () => {
         <img
           src="src/assets/Black Yellow Modern Digital Marketing Agency Facebook Cover (1286 x 394 piksel) (1) 1.png"
           alt="banner"
-          className="mx-auto mt-16 mb-3"
+          className="mx-auto mt-16 mb-3 hidden lg:block"
         />
 
-        <section className="px-4 mt-10 mb-24 flex items-center justify-center gap-9">
+        <section className="px-4 mt-10 mb-24 flex items-center flex-wrap justify-center gap-9">
           <Card title="Jumlah Santri" totalData={169} variant="green" />
           <Card title="Jumlah Pelajar" totalData={21} variant="red" />
           <Card title="Jumlah Kelas" totalData={13} variant="blue" />
@@ -28,7 +28,7 @@ const BerandaPage = () => {
       </div>
 
       <section className="bg-gradient-to-r from-[#E3F1E1] to-[#E6FFE3]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 py-5 px-12 gap-9">
+        <div className="grid grid-cols-1 lg:grid-cols-2 py-5 lg:px-12 px-3 gap-9">
           <div className="bg-white text-[#07570A] font-bold p-8 rounded-3xl">
             <div className="flex items-start gap-4">
               <div className="w-4 h-4 bg-[#07570A]"></div>
@@ -37,18 +37,18 @@ const BerandaPage = () => {
                 <p className="text-red-500">Semester Ganjil 2024/2025</p>
               </div>
             </div>
-            <div className="text-center font-bold text-xl my-8">
-              <div className="inline-table">
+            <div className="text-center font-bold text-base sm:text-xl my-4 sm:my-8">
+              <div className="grid grid-cols-[auto_1rem_auto] gap-x-2 sm:gap-x-4 mx-auto">
                 {EVENTS.map((event, index) => (
-                  <div key={index} className="table-row">
-                    <div className="table-cell text-right pr-2">
+                  <React.Fragment key={index}>
+                    <div className="text-right pr-2 text-sm sm:text-base">
                       {event.date}
                     </div>
-                    <div className="table-cell">:</div>
-                    <div className="table-cell text-left pl-1">
+                    <div className="text-center">:</div>
+                    <div className="text-left pl-1 text-sm sm:text-base">
                       {event.name}
                     </div>
-                  </div>
+                  </React.Fragment>
                 ))}
               </div>
             </div>
@@ -57,13 +57,13 @@ const BerandaPage = () => {
         </div>
       </section>
 
-      <div className="px-12">
+      <div className="lg:px-12 px-3">
         <section className="my-5">
           <div className="bg-white shadow-2xl rounded-3xl pt-5 pb-40">
             <h1 className="text-center font-bold text-2xl mb-8 text-[#347928]">
               Informasi Akademik Pesantren Mahasiswi Al-Husna
             </h1>
-            <div className="flex items-center justify-center gap-9 px-6">
+            <div className="flex items-center flex-wrap justify-center gap-9 px-6">
               <CardInfo />
               <CardInfo />
               <CardInfo />
@@ -96,7 +96,7 @@ const BerandaPage = () => {
                 Grafik Hasil Pembelajaran
               </h3>
             </div>
-            <div className="w-3/4 mx-auto mt-9">
+            <div className="lg:w-3/4 w-full mx-auto mt-9">
               <ChartBelajar />
             </div>
           </div>

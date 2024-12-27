@@ -33,12 +33,12 @@ const HasilStudiPage = () => {
       />
 
       {/* Konten utama */}
-      <div className="relative mt-14 px-12">
+      <div className="relative mt-14 lg:px-12 px-6">
         <h1 className="text-center font-extrabold text-xl mb-12 text-[#1F4918]">
           Hasil Studi Santri Pondok Pesantren Al-Husna
         </h1>
 
-        <div className="flex items-center gap-8 my-8">
+        <div className="flex md:items-center flex-col md:flex-row gap-8 my-8">
           <LabelDropdown
             label="Nama Santri :"
             options={options}

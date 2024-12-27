@@ -19,7 +19,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <ul className="flex flex-row items-center xl:gap-10 lg:gap-5 font-bold text-sm">
+        <ul className="lg:flex flex-row items-center xl:gap-10 lg:gap-5 font-bold text-sm hidden">
           <NavLink
             className={({ isActive }) =>
               isActive ? "text-[#CAA422] underline underline-offset-2" : ""

@@ -17,17 +17,17 @@ const DetailStudi = () => {
   };
 
   return (
-    <div className="mt-12 px-12">
+    <div className="mt-12 lg:px-12 px-6">
       <img
         src="/Rectangle 34.png"
         alt="hiasan"
-        className="absolute top-0 right-0"
+        className="absolute top-0 right-0 hidden lg:block"
       />
 
       <h1 className="font-extrabold text-xl text-center text-[#1F4918] mb-12">
         Hasil Studi Santri Pondok Pesantren Al-Husna
       </h1>
-      <div className="flex items-center gap-8 my-8">
+      <div className="flex items-center flex-wrap gap-8 my-8">
         <LabelDropdown
           label="Tahun Ajaran :"
           options={options}
@@ -54,7 +54,7 @@ const DetailStudi = () => {
         </button>
       </div>
 
-      <div className="bg-[#F5F4F4] rounded-xl mt-12 px-4 py-3">
+      <div className="bg-[#F5F4F4] rounded-xl mt-12 py-3">
         <h3
           onClick={() => navigate(-1)}
           className="text-[#347928] flex items-center gap-1 font-extrabold text-base mb-3 cursor-pointer"
@@ -82,7 +82,7 @@ const DetailStudi = () => {
         <div className="xl:w-3/4 w-full mx-auto my-8">
           <GradeTable />
         </div>
-        <div className="w-1/2 mx-auto">
+        <div className="lg:w-1/2 w-full mx-auto">
           <ChartBelajar />
         </div>
       </div>
