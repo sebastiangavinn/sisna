@@ -16,7 +16,7 @@ const LabelDropdown = ({
   };
 
   return (
-    <div className="flex items-center space-x-4">
+    <div className="flex md:items-center flex-col md:flex-row md:w-fit w-full gap-2">
       <label htmlFor={id} className="text-sm font-bold text-[#1F4918]">
         {label}
       </label>
@@ -25,7 +25,7 @@ const LabelDropdown = ({
         name={name}
         value={selectedValue}
         onChange={handleChange}
-        className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 w-56"
+        className="border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 md:w-56 w-full"
       >
         <option value="" disabled>
           {label}

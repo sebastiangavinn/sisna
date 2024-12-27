@@ -69,7 +69,7 @@ const ModulPembelajaranPage = () => {
   };
 
   return (
-    <div className="mt-12 px-12">
+    <div className="mt-12 lg:px-12 px-6">
       <div className="flex xl:items-center xl:flex-row flex-col justify-between">
         <div className="flex lg:items-center lg:flex-row flex-col gap-3">
           <LabelDropdown
@@ -113,7 +113,7 @@ const ModulPembelajaranPage = () => {
       </div>
 
       {/* Materials Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {materials.map((material) => (
           <Link to={`/modul-pembelajaran/detail/${material.id}`}>
             <div
@@ -176,7 +176,7 @@ const ModulPembelajaranPage = () => {
             type="file"
             accept="image/*"
             endAdorment={
-              <div className="w-1/4">
+              <div className="lg:w-1/4 w-full">
                 <PrimaryButton text="Unggah" />
               </div>
             }
@@ -186,7 +186,7 @@ const ModulPembelajaranPage = () => {
             type="file"
             accept="image/*"
             endAdorment={
-              <div className="w-1/4">
+              <div className="lg:w-1/4 w-full">
                 <PrimaryButton text="Unggah" />
               </div>
             }
@@ -209,7 +209,7 @@ const ModulPembelajaranPage = () => {
             type="file"
             accept="image/*"
             endAdorment={
-              <div className="w-1/4">
+              <div className="lg:w-1/4 w-full">
                 <PrimaryButton text="Unggah" />
               </div>
             }
@@ -240,7 +240,7 @@ const ModulPembelajaranPage = () => {
             onChange={handleInputChange("kunciJawaban")}
           />
           <div className="flex items-center justify-end">
-            <div className="flex items-center gap-4 w-1/2">
+            <div className="flex items-center gap-4 lg:w-1/2 w-full">
               <PrimaryButton
                 variant="outline"
                 text="Batal"

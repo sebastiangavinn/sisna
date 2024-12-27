@@ -23,7 +23,7 @@ const SantriPage = () => {
   ];
 
   return (
-    <div className="lg:px-20 px-3 py-5">
+    <div className="lg:px-20 px-6 py-5">
       <h3
         onClick={() => navigate(-1)}
         className="text-[#347928] flex items-center gap-1 font-extrabold text-base mb-3 cursor-pointer"
@@ -50,9 +50,9 @@ const SantriPage = () => {
         Data Santri
       </h1>
 
-      <div className="flex flex-col md:flex-row items-center gap-4 justify-end mb-6">
+      <div className="flex flex-row items-center gap-4 justify-end mb-6">
         <SearchInput />
-        <button className="py-1 px-6 rounded-lg bg-[#5D9453] text-white font-semibold text-lg">
+        <button className="py-1 px-6 rounded-lg bg-[#5D9453] text-white font-semibold md:text-lg">
           Download
         </button>
       </div>

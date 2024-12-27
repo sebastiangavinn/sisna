@@ -28,7 +28,7 @@ const BerandaPage = () => {
       </div>
 
       <section className="bg-gradient-to-r from-[#E3F1E1] to-[#E6FFE3]">
-        <div className="grid grid-cols-1 lg:grid-cols-2 py-5 lg:px-12 px-3 gap-9">
+        <div className="grid grid-cols-1 lg:grid-cols-2 py-5 lg:px-12 px-6 gap-9">
           <div className="bg-white text-[#07570A] font-bold p-8 rounded-3xl">
             <div className="flex items-start gap-4">
               <div className="w-4 h-4 bg-[#07570A]"></div>
@@ -57,7 +57,7 @@ const BerandaPage = () => {
         </div>
       </section>
 
-      <div className="lg:px-12 px-3">
+      <div className="lg:px-12 px-6">
         <section className="my-5">
           <div className="bg-white shadow-2xl rounded-3xl pt-5 pb-40">
             <h1 className="text-center font-bold text-2xl mb-8 text-[#347928]">

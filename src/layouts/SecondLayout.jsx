@@ -9,7 +9,7 @@ const SecondLayout = () => {
     <div className="bg-[#E8E8E8]">
       <div className="max-w-[1440px] mx-auto">
         <Navbar />
-        <main className="min-h-screen relative px-12 my-12">
+        <main className="min-h-screen relative lg:px-12 px-6 my-12">
           <Outlet />
         </main>
         <Footer />

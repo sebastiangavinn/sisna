@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router";
 const PengelolaanPage = () => {
   return (
     <div className="px-12 py-5">
-      <div className="mx-auto flex flex-row items-center gap-4 justify-center">
+      <div className="mx-auto flex flex-row flex-wrap items-center gap-4 justify-center">
         <Link
           to="santri"
           className="py-2 px-4 bg-[#1F4918] text-white rounded-lg"

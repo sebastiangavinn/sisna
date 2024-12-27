@@ -29,7 +29,7 @@ const HasilStudiPage = () => {
       <img
         src="/Rectangle 34.png"
         alt="hiasan"
-        className="absolute top-0 right-0"
+        className="absolute top-0 right-0 md:block hidden"
       />
 
       {/* Konten utama */}
@@ -38,16 +38,16 @@ const HasilStudiPage = () => {
           Hasil Studi Santri Pondok Pesantren Al-Husna
         </h1>
 
-        <div className="flex md:items-center flex-col md:flex-row gap-8 my-8">
+        <div className="flex items-center flex-row gap-8 my-8">
           <LabelDropdown
-            label="Nama Santri :"
+            label="Nama Santri:"
             options={options}
             onChange={handleDropdownChange}
             id="namaSantri"
             name="namaSantri"
           />
           <LabelDropdown
-            label="Kelas :"
+            label="Kelas:"
             options={options}
             onChange={handleDropdownChange}
             id="kelas"

@@ -49,7 +49,7 @@ const DetailStudi = () => {
           id="mataPelajaran"
           name="mataPelajaran"
         />
-        <button className="bg-[#347928] text-white font-semibold px-4 py-2 rounded-lg">
+        <button className="bg-[#347928] text-white font-semibold px-4 py-2 rounded-lg w-full md:w-fit">
           Download
         </button>
       </div>

@@ -27,7 +27,7 @@ const ProfilePage = () => {
 
   return (
     <div className="bg-white w-full rounded-lg">
-      <div className="px-6 py-8">
+      <div className="lg:px-6 px-0 py-8">
         <h1 className="font-extrabold text-xl text-center text-[#347928] mb-9">
           Detail Profile
         </h1>
@@ -60,7 +60,7 @@ const ProfilePage = () => {
             type="file"
             accept="image/*"
             endAdorment={
-              <div className="w-1/4">
+              <div className="md:w-1/4 w-full">
                 <PrimaryButton text="Unggah" />
               </div>
             }
@@ -104,7 +104,7 @@ const ProfilePage = () => {
             onChange={handleInputChange("noWAWali")}
           />
           <div className="flex items-center justify-end">
-            <div className="flex items-center gap-4 w-1/2">
+            <div className="flex items-center gap-4 md:w-1/2 w-full">
               <PrimaryButton
                 variant="outline"
                 text="Batal"
