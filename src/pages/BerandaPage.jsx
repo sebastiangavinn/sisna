@@ -20,10 +20,18 @@ const BerandaPage = () => {
         />
 
         <section className="px-4 mt-10 mb-24 flex items-center flex-wrap justify-center gap-9">
-          <Card title="Jumlah Santri" totalData={169} variant="green" />
-          <Card title="Jumlah Pelajar" totalData={21} variant="red" />
-          <Card title="Jumlah Kelas" totalData={13} variant="blue" />
-          <Card title="Mata Pelajaran" totalData={8} variant="orange" />
+          <Link to="/pengelolaan-pesantren/santri">
+            <Card title="Jumlah Santri" totalData={169} variant="green" />
+          </Link>
+          <Link to="/pengelolaan-pesantren/pengajar">
+            <Card title="Jumlah Pengajar" totalData={21} variant="red" />
+          </Link>
+          <Link to="/pengelolaan-pesantren/kelas">
+            <Card title="Jumlah Kelas" totalData={13} variant="blue" />
+          </Link>
+          <Link to="/pengelolaan-pesantren/mata-pelajaran">
+            <Card title="Mata Pelajaran" totalData={8} variant="orange" />
+          </Link>
         </section>
       </div>
 
