@@ -42,7 +42,7 @@ const LoginPage = () => {
           navigate("/beranda");
           break;
         case "pengurus":
-          navigate("/beranda");
+          navigate("/pengurus/beranda");
           break;
       }
     } else {

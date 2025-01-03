@@ -99,7 +99,7 @@ const BerandaPage = () => {
 
           <div className="px-8 py-9 shadow-2xl rounded-3xl my-10">
             <div className="flex items-center gap-4">
-              <div className="w-4 h-4 bg-[#1F4918]"></div>
+              <div className="w-4 h-4 bg-[#1F4918]"></div>A
               <h3 className="text-xl font-bold text-[#1F4918]">
                 Grafik Hasil Pembelajaran
               </h3>
