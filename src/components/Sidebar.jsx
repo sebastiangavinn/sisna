@@ -111,7 +111,7 @@ const Sidebar = () => {
                 ? "text-[#CAA422] underline underline-offset-2 flex items-center gap-3"
                 : "flex items-center gap-3"
             }
-            to="/pengurus/informasi"
+            to="/pengurus/informasi-akademik"
           >
             <TbSpeakerphone /> Informasi Akademik Pesantren
           </NavLink>{" "}

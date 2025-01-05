@@ -48,7 +48,7 @@ const KelasPage = () => {
         </button>
       </div>
 
-      <Table columns={columns} data={KELAS} />
+      <Table columns={columns} data={KELAS} showActionColumn />
 
       <Modal
         isOpen={isModalOpen}

@@ -11,7 +11,7 @@ const LabelDescription = ({ label, required = false, rows, ...props }) => {
         </label>
 
         {/* Textarea Wrapper */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-2 w-full">
+        <div className="flex flex-col lg:flex-row items-start gap-2 w-full">
           {/* Colon for desktop only */}
           <span className="hidden lg:block">:</span>
           <textarea

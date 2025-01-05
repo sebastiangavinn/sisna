@@ -36,13 +36,13 @@ const LoginPage = () => {
 
       switch (user.role) {
         case "santri":
-          navigate("/beranda");
+          window.location.href = "/beranda";
           break;
         case "pengajar":
-          navigate("/beranda");
+          window.location.href = "/beranda";
           break;
         case "pengurus":
-          navigate("/pengurus/beranda");
+          window.location.href = "/pengurus/beranda";
           break;
       }
     } else {

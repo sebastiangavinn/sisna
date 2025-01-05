@@ -46,7 +46,7 @@ const MataPelajaranPage = () => {
         </button>
       </div>
 
-      <Table columns={columns} data={MAPEL} />
+      <Table columns={columns} data={MAPEL} showActionColumn />
 
       <Modal
         isOpen={isModalOpen}

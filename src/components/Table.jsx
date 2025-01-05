@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router";
+import { CiEdit } from "react-icons/ci";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const Table = ({
   columns,
@@ -59,18 +61,14 @@ const Table = ({
               {showActionColumn && (
                 <td className="border border-gray-200 px-2 py-2 text-xs font-semibold rounded-md text-center">
                   <div className="flex justify-center gap-2">
-                    <button
+                    <CiEdit
                       onClick={() => onEditClick(row)}
-                      className="text-blue-500 text-xs"
-                    >
-                      Edit
-                    </button>
-                    <button
+                      className="bg-[#256589] cursor-pointer font-bold text-white w-5 h-5 rounded-md"
+                    />
+                    <RiDeleteBin6Line
                       onClick={() => alert("Hapus item")}
-                      className="text-red-500 text-xs"
-                    >
-                      Hapus
-                    </button>
+                      className="bg-red-500 cursor-pointer text-white font-bold w-5 h-5 rounded-md"
+                    />
                   </div>
                 </td>
               )}

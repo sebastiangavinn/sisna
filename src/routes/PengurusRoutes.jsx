@@ -9,6 +9,12 @@ import MataPelajaranPage from "../pages/pengurus/MataPelajaranPage";
 import TahunAjaranPage from "../pages/pengurus/TahunAjaranPage";
 import HasilStudiPage from "../pages/pengurus/HasilStudiPage";
 import DetailStudi from "../pages/pengurus/DetailStudi";
+import ModulPembelajaran from "../pages/pengurus/ModulPembelajaran";
+import DetailModul from "../pages/pengurus/DetailModul";
+import InformasiAkademik from "../pages/pengurus/InformasiAkademik";
+import DetailInformasi from "../pages/pengurus/DetailInformasi";
+import DataSantriPage from "../pages/pengurus/DataSantriPage";
+import DataPengajarPage from "../pages/pengurus/DataPengajarPage";
 
 const PengurusRoutes = () => {
   return (
@@ -28,6 +34,24 @@ const PengurusRoutes = () => {
           path="/pengurus/hasil-studi/detail/:id"
           element={<DetailStudi />}
         />
+        <Route
+          path="/pengurus/modul-pembelajaran"
+          element={<ModulPembelajaran />}
+        />
+        <Route
+          path="/pengurus/modul-pembelajaran/detail/:id"
+          element={<DetailModul />}
+        />
+        <Route
+          path="/pengurus/informasi-akademik"
+          element={<InformasiAkademik />}
+        />
+        <Route
+          path="/pengurus/informasi-akademik/detail"
+          element={<DetailInformasi />}
+        />
+        <Route path="/pengurus/akun-santri" element={<DataSantriPage />} />
+        <Route path="/pengurus/akun-pengajar" element={<DataPengajarPage />} />
       </Route>
     </Routes>
   );

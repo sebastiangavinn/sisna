@@ -54,7 +54,7 @@ const TahunAjaranPage = () => {
         </button>
       </div>
 
-      <Table columns={columns} data={TAHUN_AJARAN} />
+      <Table columns={columns} data={TAHUN_AJARAN} showActionColumn />
 
       <Modal
         isOpen={isModalOpen}

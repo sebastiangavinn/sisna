@@ -58,7 +58,7 @@ const PengajarPage = () => {
         </button>
       </div>
 
-      <Table columns={columns} data={multipleData} />
+      <Table columns={columns} data={multipleData} showActionColumn />
 
       <Modal
         isOpen={isModalOpen}

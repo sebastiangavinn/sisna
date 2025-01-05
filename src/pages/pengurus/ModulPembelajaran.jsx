@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { FiTrash2, FiEdit } from "react-icons/fi";
-import LabelDropdown from "../components/LabelDropdown";
-import Modal from "../components/Modal";
-import FormField from "../components/FormField";
-import LabelDescription from "../components/LabelDescription";
-import PrimaryButton from "../components/PrimaryButton";
+import LabelDropdown from "../../components/LabelDropdown";
+import Modal from "../../components/Modal";
+import FormField from "../../components/FormField";
+import LabelDescription from "../../components/LabelDescription";
+import PrimaryButton from "../../components/PrimaryButton";
 
-const ModulPembelajaranPage = () => {
+const ModulPembelajaran = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [form, setForm] = useState({
     tahun: "",
@@ -56,8 +56,6 @@ const ModulPembelajaranPage = () => {
       image: "/empuan (3) 1.png",
     },
   ];
-  const user = JSON.parse(localStorage.getItem("user"));
-
   const handleInputChange = (field) => (e) => {
     setForm((prev) => ({ ...prev, [field]: e.target.value }));
   };
@@ -68,9 +66,8 @@ const ModulPembelajaranPage = () => {
   const handleDropdownChange = (value) => {
     console.log("Selected:", value);
   };
-
   return (
-    <div className="mt-12 lg:px-12 px-6">
+    <div className="py-5">
       <div className="flex xl:items-center xl:flex-row flex-col justify-between">
         <div className="flex lg:items-center lg:flex-row flex-col gap-3">
           <LabelDropdown
@@ -95,17 +92,15 @@ const ModulPembelajaranPage = () => {
             name="mataPelajaran"
           />
         </div>
-        {user.role === "pengajar" && (
-          <button
-            onClick={handleModalOpen}
-            className="bg-[#347928] text-white py-2 px-4 rounded-lg text-sm font-bold xl:mt-0 mt-9"
-          >
-            <span className="bg-white py-[0.5] px-2 font-extrabold rounded-md text-[#347928] text-lg">
-              +
-            </span>{" "}
-            Tambah Materi
-          </button>
-        )}
+        <button
+          onClick={handleModalOpen}
+          className="bg-[#347928] text-white py-2 px-4 rounded-lg text-sm font-bold xl:mt-0 mt-9"
+        >
+          <span className="bg-white py-[0.5] px-2 font-extrabold rounded-md text-[#347928] text-lg">
+            +
+          </span>{" "}
+          Tambah Materi
+        </button>
       </div>
 
       {/* Title Section */}
@@ -118,7 +113,7 @@ const ModulPembelajaranPage = () => {
       {/* Materials Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         {materials.map((material) => (
-          <Link to={`/modul-pembelajaran/detail/${material.id}`}>
+          <Link to={`/pengurus/modul-pembelajaran/detail/${material.id}`}>
             <div
               key={material.id}
               className="border-2 border-[#CAA422] rounded-lg p-4 bg-white"
@@ -135,16 +130,14 @@ const ModulPembelajaranPage = () => {
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-gray-500">{material.date}</span>
                 </div>
-                {user.role === "pengajar" && (
-                  <div className="flex items-center gap-2">
-                    <button className="p-1 text-red-500 hover:bg-red-50 rounded">
-                      <FiTrash2 className="w-4 h-4" />
-                    </button>
-                    <button className="p-1 text-blue-500 hover:bg-blue-50 rounded">
-                      <FiEdit className="w-4 h-4" />
-                    </button>
-                  </div>
-                )}
+                <div className="flex items-center gap-2">
+                  <button className="p-1 text-red-500 hover:bg-red-50 rounded">
+                    <FiTrash2 className="w-4 h-4" />
+                  </button>
+                  <button className="p-1 text-blue-500 hover:bg-blue-50 rounded">
+                    <FiEdit className="w-4 h-4" />
+                  </button>
+                </div>
               </div>
             </div>
           </Link>
@@ -260,4 +253,4 @@ const ModulPembelajaranPage = () => {
   );
 };
 
-export default ModulPembelajaranPage;
+export default ModulPembelajaran;

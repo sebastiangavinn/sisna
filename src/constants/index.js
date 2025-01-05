@@ -128,3 +128,33 @@ export const TAHUN_AJARAN = [
     periodeSemester: "07/08/2021 - 22/12/2021",
   },
 ];
+
+export const AKUN_SANTRI = [
+  {
+    name: "Naimatul Mutamimah",
+    email: "naimatulmtmhh0@gmail.com",
+    phoneNumber: "083678567495",
+    password: "********",
+  },
+  {
+    name: "Zahrotun Nisa’",
+    email: "zahroonisa68@gmail.com",
+    phoneNumber: "085432785465",
+    password: "********",
+  },
+];
+
+export const AKUN_PENGAJAR = [
+  {
+    name: "Nailatus Sa’adah",
+    email: "nailatussdah980@gmail.com",
+    phoneNumber: "083678567495",
+    password: "********",
+  },
+  {
+    name: "Nur Aisyah Maharani",
+    email: "aisyahmhrni87@gmail.com",
+    phoneNumber: "085432785465",
+    password: "********",
+  },
+];

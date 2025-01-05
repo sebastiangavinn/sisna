@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router";
+import { Routes, Route, Navigate } from "react-router";
 
 import MainLayout from "../layouts/MainLayout";
 import SecondLayout from "../layouts/SecondLayout";
@@ -18,6 +18,8 @@ import InformasiDetailPage from "../pages/InformasiDetailPage";
 import ProfilePage from "../pages/ProfilePage";
 
 const SantriRoutes = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  console.log(user);
   return (
     <Routes>
       <Route element={<MainLayout />}>
@@ -29,6 +31,9 @@ const SantriRoutes = () => {
           <Route path="kelas" element={<KelasPage />} />
           <Route path="mata-pelajaran" element={<MapelPage />} />
         </Route>
+        {user.role === "santri" && (
+          <Route path="hasil-studi" element={<Navigate to="detail/1" />} />
+        )}
         <Route path="hasil-studi" element={<HasilStudiPage />} />
         <Route path="hasil-studi/detail/:id" element={<DetailStudi />} />
         <Route path="modul-pembelajaran" element={<ModulPembelajaranPage />} />
